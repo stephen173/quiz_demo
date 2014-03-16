@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset='UTF-8'>
+	
+	<title>Practice Test</title>
+
+	<link rel="stylesheet" href="css/quizmc.css" type="text/css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+<style>
+	.president1 {
+		position: absolute;
+		margin-left: 10px;
+		top: 112px;
+		background-image: url(css/images/George_Washington.jpg);
+		background-size:80px 100px;
+		background-repeat:no-repeat;
+		width: 80px;
+		height: 257px;
+		-moz-transition: all .5s;
+		-webkit-transition: all .5s;
+		transition: all .5s;
+		z-index: 1;
+
+}
+</style>
+
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>		
+		<script type="text/javascript" charset="utf-8">
+		
+		$(document).ready(function(){
+		var quizArray = [
+'28~76~<span class ="bla">Who was the third President of the United States?</span>~George Washington~Abraham Lincoln~Thomas Jefferson~Andrew Jackson',
+'27~55~Which of the following shapes has a vertical line of symmetry?~Nonagon~Crescent~Triangle~Septagon'
+];
+$("#box").html(quizArray.toString());
+juice = quizArray.slice(3,5);
+
+});
+$('.bla').mouseenter(function(e){
+	$(".president1").fadeIn(400);
+
+})
+$('.bla').mouseleave(function(e){
+
+	$(".president1").fadeOut(400);
+});
+		</script>
+		</head>
+<body>
+
+	<h1>jQuery Arrays</h1>
+			<div id="box"></div>
+	
+
+
+</body>
+
+</html>

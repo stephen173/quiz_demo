@@ -1,0 +1,182 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 14px Georgia, serif;
+	background-color: #3ea2b7;
+	margin: 0;
+}
+h1 {
+	text-transform: uppercase;
+	background-color: #c0c0c0;
+	height: 15px;
+	width: 500px;
+	padding: 20px 0 -10px 0;
+	position: relative;
+	border-bottom: 2px solid black;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	font-family: "Helvetica Neue", Sans-Sarif;
+	font-size: 32px;
+	border: 2px solid #c0c0c0;
+	padding: 30px;
+}
+	
+.test {
+	position: absolute;
+	z-index: 0;
+	left: 184px;
+	top: 110px;
+	width: 300px;
+	height: 20px;
+}
+
+article {
+	position: relative;
+	background-color: #c0c0c0;
+	width: 312px;
+	height: 575px;
+	border-bottom: 2px solid black;
+}
+nav, article {
+	float: left;
+	background-color: #c0c0c0;
+	border: 2px solid black;
+	height: 500px;
+}
+nav {
+	width: 176px;
+}
+#site {
+	position: relative;
+	width: 496px;
+	margin: 0 auto;
+}
+
+.answer1{	position: absolute; 
+			left: 320px;
+			top: 500px;
+			width:140px;
+			height: 30px;
+			z-index: 0;
+			}
+
+a {
+	color: red;
+}
+
+.president1 {
+		position: absolute;
+		margin-left: 10px;
+		top: 112px;
+		background-image: url(images/George_Washington.jpg);
+		background-size:80px 100px;
+		background-repeat:no-repeat;
+
+		width: 80px;
+		height: 257px;
+		-moz-transition: all .5s;
+		-webkit-transition: all .5s;
+		transition: all .5s;
+		z-index: 1;
+}
+.president2 {
+		position: absolute;
+		margin-left: 0px;
+		top: 112px;
+		left: 87px;
+		background-image: url(images/AL.jpeg);
+		background-size:80px 100px;
+		background-repeat:no-repeat;
+		width: 80px;
+		height: 257px;
+		-moz-transition: all .5s;
+		-webkit-transition: all .5s;
+		transition: all .5s;
+		z-index: 1;
+}
+.president3 {
+		position: absolute;
+		margin-left: 10px;
+		top: 208px;
+		background-image: url(images/Thomas_Jefferson.jpg);
+		background-size:80px 100px;
+		background-repeat:no-repeat;
+		width: 80px;
+		height: 250px;
+		-moz-transition: all .5s;
+		-webkit-transition: all .5s;
+		transition: all .5s;
+		z-index: 1;
+}
+.president4 {
+		position: absolute;
+		margin-left: 0px;
+		top: 208px;
+		left: 87px;
+		background-image: url(images/andrew-jackson6.jpg);
+		background-size:80px 100px;
+		background-repeat:no-repeat;
+		width: 80px;
+		height: 250px;
+		-moz-transition: all .5s;
+		-webkit-transition: all .5s;
+		transition: all .5s;
+		z-index: 1;
+}
+
+.shape1 {
+		position: absolute;
+		margin: 7px 0 0 11px;
+		top: 314px;
+		background-image: url(images/Nonagon.gif);
+		background-size:70px 90px;
+		background-repeat:no-repeat;
+		width: 100px;
+		height: 257px;
+		z-index: 1;
+}
+.shape2 {
+		position: absolute;
+		margin: 10px 0 0 10px;
+		top: 314px;
+		left: 81px;
+		background-image: url(images/crescent.jpeg);
+		background-size:65px 80px;
+		background-repeat:no-repeat;
+		width: 100px;
+		height: 257px;
+		-moz-transition: all .5s;
+		-webkit-transition: all .5s;
+		transition: all .5s;
+		z-index: 1;
+}
+.shape3 {
+		position: absolute;
+		margin: 15px 5px 5px 10px;
+		top: 404px;
+		left: 81px;
+		background-image: url(images/septagon.jpg);
+		background-size:70px 85px;
+		background-repeat:no-repeat;
+		width: 100px;
+		height: 257px;
+		z-index: 1;
+}
+.shape4 {
+		position: absolute;
+		margin: 20px 5px 5px 15px;
+		top: 404px;
+		background-image: url(images/triangle.gif);
+		background-size:65px 80px;
+		background-repeat:no-repeat;
+		width: 100px;
+		height: 257px;
+		-moz-transition: all .5s;
+		-webkit-transition: all .5s;
+		transition: all .5s;
+		z-index: 1;
+}

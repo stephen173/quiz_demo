@@ -1,0 +1,14 @@
+label {display:block;}
+.quiz {width:300px;}
+#site {
+	width: 400px;
+	margin: 0 auto;
+	position: relative;
+}
+.quiz form {padding:3px;border:1px solid #c0c0c0;}
+.quiz p {margin:0 -5px 1px 35px;padding:3px;border:1px solid #000;}
+.quiz p b {margin:0 3px 13px 15px;font:150% verdana;color:#006666;}
+.question {margin:25px 0px 20px 5px;padding:3px 0 3px 4px;font:123% verdana;color:#006666;}
+.answers {padding:0 3px 15px 15px;font:110% verdana;}
+.hovereffect:hover {color:black;text-decoration:underline;}
+
