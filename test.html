@@ -4,51 +4,321 @@
 <head>
 	<meta charset='UTF-8'>
 	
-	<title>Quiz Demo</title>
-	<link rel="stylesheet" href="css/quizmc.css" type="text/css">
+	<title>Practice Test</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $(".timeline").fadeToggle("slow", "linear");
+  });
+});
+
+numberQuestions = 4
+
+var AA=new Array(numberQuestions + 1);
+
+/*A nested for loop.
+
+The outer loop cycles through each question asked.
+
+The inner loop checks the value of each answer. Since we have three responses to each quiz, the middle parameter is 3. Change this number to correspond to the number of responses per question in your quiz.*/
+
+function first( ) {
+
+for (var w=1; w <= numberQuestions; w++) {
+
+for(var n=0; n <=3; n++){
+
+/*This if statement checks to see if that particular response was selected. If it was, then the value of the response is put in the array AA. Notice also that I am accessing the forms through the forms array. Using the forms array enables me to check through all the questions using a loop, instead of accessing each form individually.*/
+
+if (document.forms[w].elements[n].checked){
+
+AA[w] = document.forms[w].elements[n].value;
+
+}
+
+}
+
+}
+
+/*This places the name of the person taking the quiz into the 0th position of the array. Remember that arrays begin at position 0. This will be the persons name.*/
+
+AA[0] = document.id.input1.value
+
+var z=0;
+
+/*This little for loop cycles through the responses that are stored in the array AA. If the answer is correct, and you need to type the word correct, no spaces, capitalization or any other variation, then we add 1 to the value of z. This will enable us to determine what percentage of questions the student got correct.*/
+
+for (var n=1; n<= numberQuestions; n++) {
+
+if (AA[n] == "correct") {z+=1};
+
+}
+
+results=window.open("","","height=400,width=250,scrollbars=yes")
+
+results.document.open();
+
+results.document.write ("<html>" +
+
+"<head><title>Answers</title>"+
+
+"<body bgcolor=blue text=white>"+
+
+"<hr>"+"<BR>" +
+
+"Number 1 is : "+AA[1] +"<br>"+
+
+"Number 2 is: "+AA[2] +"<br>"+
+
+"Number 3 is: "+AA[3] + "<br>"+
+
+"Number 4 is : "+AA[4] +"<br>"+
+
+"<br><br>"+
+
+AA[0] + ", you got "+z+" correct out of "+ numberQuestions +"<br><br>" + "Your score is "+ Math.round((z/ numberQuestions) * 100)+" %"
+
++"<br><br></body></html>");
+
+results.document.close();
+
+}
+</script>
 
 	<link rel="stylesheet" href="css/style.css">
 	
-	<script src="js/jquery.js"></script>
-	<script src="js/tooltips.js"></script>
-
 </head>
-
+     
 <body>
+
 	<div id="site">
-		<h1>
-		PPPractice Test
-		</h1>
-		<div class="test">
-		  	<div id="quiz1" class="quiz"></div>
-			<div id="quiz2" class="quiz"></div>
-		</div>
-			<div class="answer1">
+
+		<h2>
+			<form NAME="id">
+Please enter your name <input size="35" type="text" name="input1" rows="1" cols="50">
+</form></h2>
+
+
+<div class ="president1"><img src = "images/George_Washington.jpg" height='235' width='200'></div>
+<div class ="president2"><img src = "images/AL.jpeg" height='235' width='200'></div>
+<div class ="president3"><img src = "images/Thomas_Jefferson.jpg" height='235' width='200'></div>
+<div class ="president4"><img src = "images/andrew-jackson6.jpg" height='235' width='200'></div>
+<div class ="shape1"><img src = "images/blueNonagon.png" height='235' width='200'></div>
+<div class ="shape2"><img src = "images/bluecrescent.png" height='235' width='200'></div>
+<div class ="shape3"><img src = "images/trapezoid.png" height='265' width='260'></div>
+<div class ="shape4"><img src = "images/bluetriangle.png" height='235' width='200'></div>
+<div class ="shape5"><img src = "images/parallel.png" height='235' width='200'></div>
+<div class ="shape6"><img src = "images/Square_1000.gif" height='235' width='200'></div>
+<div class ="shape7"><img src = "images/rect.png" height='185' width='270'></div>
+<div class ="shape8"><img src = "images/diamond.png" height='235' width='200'></div>
+<div class="timelinebutton"><button>Click to see Revolution Timeline</button></div>
+<div class ="timeline"><img src = "images/americanrevolution.png" ></div>
+
+			<div class="test">
+
+				<form>
+					<p>1. Who was the third President of the United States?
+
+					<div class="question1a"><input type="radio" name="Q1" value="Sorry, the correct answer is C."> George Washington</div>
+
+					<div class="question1b"><input type="radio" name="Q1" value="Sorry, the correct answer is C."> Abraham Lincoln<br></div>
+
+					<div class="question1c"><input type="radio" name="Q1" value="correct"> Thomas Jefferson<br></div>
+
+					<div class="question1d"><input type="radio" name="Q1" value="Sorry, the correct answer is C."> Andrew Jackson<br></div>
+
+					</p>
+				</form>
+
+				<form>
+					<p>2. Which of the following shapes has a vertical line of symmetry?<br>
+
+					<div class="question2a"><input type="radio" name="Q2" value="Sorry, the correct answer is C."> Nonagon<br></div>
+
+					<div class="question2b"><input type="radio" name="Q2" value="Sorry, the correct answer is C."> Crescent<br></div>
+
+					<div class="question2c"><input type="radio" name="Q2" value="correct"> Triangle<br></div>
+
+					<div class="question2d"><input type="radio" name="Q2" value="Sorry, the correct answer is C."> Right-angled Trapezoid</div>
+
+					</p>
+				</form>
+        <form>
+          <p>3. A quadrilateral whose diagonals intersect at their centre and have the same length but are not perpendicular is:<br>
+
+          <div class="question3a"><input type="radio" name="Q3" value="Sorry, the correct answer is C."> a parallelogram.<br></div>
+
+          <div class="question3b"><input type="radio" name="Q3" value="Sorry, the correct answer is C."> a square.<br></div>
+
+          <div class="question3c"><input type="radio" name="Q3" value="correct"> a rectangle.<br></div>
+
+          <div class="question3d"><input type="radio" name="Q3" value="Sorry, the correct answer is C."> a diamond.</div>
+
+          </p>
+        </form>
+
+    <form>
+          <p>4. When did the Boston Tea Party take place?<br>
+
+          <div class="question4a"><input type="radio" name="Q4" value="correct"> 1773<br></div>
+
+          <div class="question4b"><input type="radio" name="Q4" value="Sorry, the correct answer is A."> 1776<br></div>
+
+          <div class="question4c"><input type="radio" name="Q4" value="Sorry, the correct answer is A."> 1777<br></div>
+
+          <div class="question4d"><input type="radio" name="Q4" value="Sorry, the correct answer is A."> 1783</div>
+
+          </p>
+    </form>
 			</div>
+      <form>
 
-		<script src="js/quizqa1.js" type="text/javascript"></script>
-		<script src="js/quizmc.js" type="text/javascript"></script>
-		<nav>			
-			<div class="president1"></div>
+<div class ="answer1"><p><input type="button" name="answers" value="Click for answers" onclick="first()"> 
+<input type="button" name="close" value="Click to close answer window" onclick="results.close();"> </p></div>
 
-			<div class="president2"></div>
-			<div class="president3"></div>
-			<div class="president4"></div>
-			<div class="shape1"></div>
-			<div class="shape2"></div>
-			<div class="shape3"></div>
-			<div class="shape4"></div>
-		</nav>
-		<article>
-		</article>
+</form>
+  <div class ="timeline"><img src = "images/americanrevolution.png" ></div>
+
 	</div>
-			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>		
-		<script type="text/javascript" charset="utf-8">
+	      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+    <script type="text/javascript" charset="utf-8">
 
-		
+    $('.question1a').mouseenter(function(e) {
+      $('.president1').animate({
+    opacity: 1
+  });
+  })
+    $('.question1a').mouseleave(function(e){
+      	$('.president1').animate({
+    opacity: 0
+  });
+  })
 
+    $('.question1b').mouseenter(function(e) {
+      $('.president2').animate({
+    opacity: 1
+  });
+  })
+    $('.question1b').mouseleave(function(e){
+      	$('.president2').animate({
+    opacity: 0
+  });
+  })
 
-		</script>
+    $('.question1c').mouseenter(function(e) {
+      $('.president3').animate({
+    opacity: 1
+  });
+  })
+    $('.question1c').mouseleave(function(e){
+      	$('.president3').animate({
+    opacity: 0
+  });
+  })
+        $('.question1d').mouseenter(function(e) {
+      $('.president4').animate({
+    opacity: 1
+  });
+  })
+    $('.question1d').mouseleave(function(e){
+      	$('.president4').animate({
+    opacity: 0
+  });
+  })
+
+    $('.question2a').mouseenter(function(e) {
+      $('.shape1').animate({
+    opacity: 1
+  });
+  })
+    $('.question2a').mouseleave(function(e){
+        $('.shape1').animate({
+    opacity: 0
+  });
+  })
+
+    $('.question2b').mouseenter(function(e) {
+      $('.shape2').animate({
+    opacity: 1
+  });
+  })
+    $('.question2b').mouseleave(function(e){
+        $('.shape2').animate({
+    opacity: 0
+  });
+  })
+
+    $('.question2c').mouseenter(function(e) {
+      $('.shape4').animate({
+    opacity: 1
+  });
+  })
+    $('.question2c').mouseleave(function(e){
+        $('.shape4').animate({
+    opacity: 0
+  });
+  })
+        $('.question2d').mouseenter(function(e) {
+      $('.shape3').animate({
+    opacity: 1
+  });
+  })
+    $('.question2d').mouseleave(function(e){
+        $('.shape3').animate({
+    opacity: 0
+  });
+  })
+        $('.question3a').mouseenter(function(e) {
+      $('.shape5').animate({
+    opacity: 1
+  });
+  })
+    $('.question3a').mouseleave(function(e){
+        $('.shape5').animate({
+    opacity: 0
+  });
+  })
+
+    $('.question3b').mouseenter(function(e) {
+      $('.shape6').animate({
+    opacity: 1
+  });
+  })
+    $('.question3b').mouseleave(function(e){
+        $('.shape6').animate({
+    opacity: 0
+  });
+  })
+
+    $('.question3c').mouseenter(function(e) {
+      $('.shape7').animate({
+    opacity: 1
+  });
+  })
+    $('.question3c').mouseleave(function(e){
+        $('.shape7').animate({
+    opacity: 0
+  });
+  })
+        $('.question3d').mouseenter(function(e) {
+      $('.shape8').animate({
+    opacity: 1
+  });
+  })
+    $('.question3d').mouseleave(function(e){
+        $('.shape8').animate({
+    opacity: 0
+  });
+  });
+    $('.timelinebutton').click(function(e) {
+       $('.timeline').animate({
+    opacity: 1
+  });
+  });
+        
+    </script>
 </body>
 
 </html>
